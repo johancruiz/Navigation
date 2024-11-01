@@ -6,11 +6,11 @@ import { NavigationProp, useNavigation } from '@react-navigation/native';
 import { RootStackParam } from '../../routes/StackNavigator';
 
 const products = [
-  {id: 1, name: 'Producto 1'},
-  {id: 2, name: 'Producto 2'},
+  {id: 1, name: 'Product 1'},
+  {id: 2, name: 'Product 2'},
   {id: 3, name: 'Producto 3'},
-  {id: 4, name: 'Producto 4'},
-  {id: 5, name: 'Producto 5'}
+  {id: 4, name: 'Product 4'},
+  {id: 5, name: 'Product 5'}
 ];
 
 const ProductsScreen = () => {
@@ -19,7 +19,7 @@ const ProductsScreen = () => {
 
   return (
     <View style={ globalStyles.container } >
-        <Text style={ {marginBottom: 10, fontSize: 30} } >Productos</Text>
+        <Text style={ {marginBottom: 10, fontSize: 20} } >Products</Text>
 
         <FlatList
           data={ products }
@@ -29,10 +29,13 @@ const ProductsScreen = () => {
               label={ item.name }
             />
           ) }
-        />
+        />  
+            
 
+
+            <Text style={ {marginBottom: 10, fontSize: 20} } >Settings</Text>
             <PrimaryButton 
-              onPress={ () => {navigation.navigate('Settings' as never )} }
+              onPress={ () => {navigation.navigate('Settings')} }
               label={ 'Settings' }
             />
     </View>

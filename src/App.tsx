@@ -1,12 +1,15 @@
 import './gesture-handler.native'
-import { Text, View } from 'react-native'
 import { NavigationContainer } from '@react-navigation/native';
 import StackNavigator from './presentation/routes/StackNavigator';
+import SideMenuNavigator from './presentation/routes/SideMenuNavigator';
+import BottomTabsNavigator from './presentation/routes/BottomTabsNavigator';
 
 const App = () => {
   return (
     <NavigationContainer>
-        <StackNavigator />
+        {/* <StackNavigator /> */}
+         <SideMenuNavigator /> 
+        {/* <BottomTabsNavigator /> */}
     </NavigationContainer>
    
   )
